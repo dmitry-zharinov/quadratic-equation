@@ -1,6 +1,7 @@
-from square_root import square_root
+from modules.quadratic_equation import solve_equation
 
 print("Please enter a, b, c.")
+print("ax^2 + bx + c = 0")
 
 while True:
     a = input("a = ")
@@ -10,9 +11,9 @@ while True:
     b = input("b = ")
     c = input("c = ")
 
-    result = square_root(a, b, c)
+    result = solve_equation(a, b, c)
     print(f'Result: x = {result}')
 
-    
+
 if __name__ == '__main__':
-    square_root()
+    solve_equation()
