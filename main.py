@@ -1,19 +1,21 @@
-from modules.quadratic_equation import solve_equation
+from modules.quadratic import quadratic
 
-print("Please enter a, b, c.")
-print("ax^2 + bx + c = 0")
 
-while True:
-    a = input("a = ")
-    if a == "x":
-        print("Good bye.")
-        break
-    b = input("b = ")
-    c = input("c = ")
+def solve_quadratic():
+    print("ax^2 + bx + c = 0")
+    print("Please enter coefficients a, b, c (or 'x' to exit):")
 
-    result = solve_equation(a, b, c)
-    print(f'Result: x = {result}')
+    while True:
+        a = input("a = ")
+        if a == "x":
+            print("Goodbye.")
+            break
+        b = input("b = ")
+        c = input("c = ")
+
+        result = quadratic(a, b, c)
+        print(f'Result: x = {result}')
 
 
 if __name__ == '__main__':
-    solve_equation()
+    solve_quadratic()
