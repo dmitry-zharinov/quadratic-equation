@@ -14,7 +14,7 @@ class SquareRootTestCase(unittest.TestCase):
         self.assertEqual(result, None)
 
     # D = 0
-    def test_root_less_zero(self):
+    def test_one_root(self):
         result = quadratic(2, 4, 2)
         self.assertEqual(result, -1)
 
